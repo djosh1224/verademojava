@@ -27,8 +27,10 @@ jobs:
 
       - name: Build the project
         run: |
+          pwd
           cd app
-          ./mvnw clean install  # If using Maven (use './gradlew' for Gradle)
+          pwd
+          ./mvn clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
 
       - name: Veracode Agent SCA Scan
