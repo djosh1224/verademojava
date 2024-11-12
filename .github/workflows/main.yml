@@ -34,8 +34,10 @@ jobs:
 
       - name: Build the project
         run: |
+          ls -l mvnw
           cd app
           ls -ltr
+          ls -l mvnw
           pwd
           ./mvnw clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
