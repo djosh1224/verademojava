@@ -1,7 +1,3 @@
-ly around setting up the environment and building the project since you are dealing with Java rather than .NET. Here is the updated YAML for your Java project:
-
-yaml
-Copy code
 on:
   push:
     branches:
