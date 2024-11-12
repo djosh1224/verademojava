@@ -27,6 +27,7 @@ jobs:
 
       - name: Install Maven
         run: |
+          pwd
           sudo apt-get update
           sudo apt-get install -y maven
         shell: bash
@@ -36,7 +37,7 @@ jobs:
           cd app
           ls -ltr
           pwd
-          mvnw clean install  # If using Maven (use './gradlew' for Gradle)
+          ./mvnw clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
 
       - name: Veracode Agent SCA Scan
