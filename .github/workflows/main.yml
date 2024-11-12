@@ -25,6 +25,12 @@ jobs:
           java-version: '11'  # Specify your desired Java version (e.g., 11, 17, etc.)
           distribution: 'temurin'  # You can also use 'temurin' if preferred
 
+      - name: Install Maven
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y maven
+        shell: bash
+
       - name: Build the project
         run: |
           cd app
