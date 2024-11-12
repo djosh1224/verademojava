@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'  # Specify your desired Java version (e.g., 11, 17, etc.)
-          distribution: 'adoptopenjdk'  # You can also use 'temurin' if preferred
+          distribution: 'temurin'  # You can also use 'temurin' if preferred
 
       - name: Build the project
         run: |
