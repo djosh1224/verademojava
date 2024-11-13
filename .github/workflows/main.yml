@@ -34,7 +34,6 @@ jobs:
 
       - name: Build the project
         run: |
-          ls -l mvnw
           cd app
           ls -ltr
           chmod +x mvnw
