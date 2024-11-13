@@ -36,10 +36,9 @@ jobs:
 
       - name: Build the project
         run: |
-          cd app
           ls -ltr
           pwd
-          ./app/mvn clean install  # If using Maven (use './gradlew' for Gradle)
+          /home/runner/work/verademojava/verademojava/mvn clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
 
       - name: Veracode Agent SCA Scan
