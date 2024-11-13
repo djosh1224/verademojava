@@ -39,6 +39,11 @@ jobs:
           ls -la target
         shell: bash
 
+      - name: Configure Git user
+        run: |
+          git config --global user.email "dipti.joshi@capgemini.com"
+          git config --global user.name "diptjosh"
+
       
       - name: Veracode Agent SCA Scan
         env:
