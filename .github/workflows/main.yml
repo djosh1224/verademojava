@@ -32,12 +32,14 @@ jobs:
           sudo apt-get install -y maven
           pwd
           mvn -v
+          mvn clean install
         shell: bash
 
       - name: Build the project
         run: |
           ls -ltr
           pwd
+          mvn -v
           /home/runner/work/verademojava/verademojava/mvn clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
 
