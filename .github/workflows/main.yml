@@ -32,6 +32,7 @@ jobs:
           sudo apt-get install -y maven
           pwd
           mvn -v
+          cd app
           mvn clean install
         shell: bash
 
