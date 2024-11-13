@@ -22,7 +22,7 @@ jobs:
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # Specify your desired Java version (e.g., 11, 17, etc.)
+          java-version: '11'  # #Specify your desired Java version (e.g., 11, 17, etc.)
           distribution: 'temurin'  # You can also use 'temurin' if preferred
 
       - name: Install Maven and build the project
