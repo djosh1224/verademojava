@@ -49,6 +49,9 @@ jobs:
         env:
          SRCCLR_SCM_TYPE: GITHUB
          SRCCLR_SCM_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+         PR_ON: "High,Medium"     
+         NO_BREAKING_UPDATES: "false"  # Allow breaking updates (false = will not block major version upgrades)
+         IGNORE_CLOSE_PRS: "true"
         run: |
           cd app
           pwd
