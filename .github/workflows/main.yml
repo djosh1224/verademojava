@@ -41,12 +41,15 @@ jobs:
 
       
       - name: Veracode Agent SCA Scan
+        env:
+         SRCCLR_SCM_TYPE: GITHUB
+         SRCCLR_SCM_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
           cd app
           pwd
           export SRCCLR_SCM_TYPE="GITHUB"
-          export SRCCLR_SCM_TOKEN= =${{ secrets.ACCESS_TOKEN }}
+          export SRCCLR_SCM_TOKEN="${{ secrets.SCM_TOKEN }}"
           export SRCCLR_API_TOKEN=${{ secrets.SRCCLR_TOKEN }}
-          export SRCCLR_SKIP_JAVA_MAVEN_INSTALL=true  # Skip Maven install, as we've already built the project
-          curl -sSL https://download.sourceclear.com/ci.sh | sh -s -- scan --update-advisor --pull-request --access-token $SRCCLR_SCM_TOKEN
+          export SRCCLR_SKIP_DOTNET_RESTORE=true
+          curl -sSL https://download.sourceclear.com/ci.sh | sh -s -- scan --update-advisor --pull-request
         shell: bash
