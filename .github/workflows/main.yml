@@ -36,7 +36,6 @@ jobs:
         run: |
           cd app
           ls -ltr
-          chmod +x mvnw
           pwd
           ./mvn clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
