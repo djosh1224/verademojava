@@ -38,8 +38,9 @@ jobs:
           cd app
           ls -ltr
           ls -l mvnw
+          chmod +x mvnw
           pwd
-          ./mvnw clean install  # If using Maven (use './gradlew' for Gradle)
+          ./mvn clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
 
       - name: Veracode Agent SCA Scan
