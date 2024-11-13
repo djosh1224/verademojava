@@ -27,13 +27,16 @@ jobs:
 
       - name: Install Maven and build the project
         run: |
-          pwd
-          sudo apt-get update
-          sudo apt-get install -y maven
-          pwd
-          mvn -v
-          cd app
-          mvn clean install
+          # pwd
+          # sudo apt-get update
+          # sudo apt-get install -y maven
+          # pwd
+          # mvn -v
+          # cd app
+          # mvn clean install
+          cd app && mvn clean install
+          mvn compile -Dcheckstyle.skip=true -e -DskipITs -Dmaven.test.skip=true --fail-fast --nsu -Denforcer.skip=true
+          ls -la target
         shell: bash
 
       
