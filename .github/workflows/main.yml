@@ -30,6 +30,8 @@ jobs:
           pwd
           sudo apt-get update
           sudo apt-get install -y maven
+          pwd
+          mvn -v
         shell: bash
 
       - name: Build the project
@@ -37,7 +39,7 @@ jobs:
           cd app
           ls -ltr
           pwd
-          ./mvn clean install  # If using Maven (use './gradlew' for Gradle)
+          ./app/mvn clean install  # If using Maven (use './gradlew' for Gradle)
         shell: bash
 
       - name: Veracode Agent SCA Scan
